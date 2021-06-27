@@ -1,27 +1,24 @@
-package com.example.icar.ui.transaction;
-
-import androidx.lifecycle.ViewModelProvider;
+package com.example.icar.home_ui.history;
 
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.icar.databinding.FragmentTransactionBinding;
+import com.example.icar.databinding.FragmentHistoryBinding;
 
-public class TransactionFragment extends Fragment {
+public class HistoryFragment extends Fragment {
 
-    private FragmentTransactionBinding binding;
+    private FragmentHistoryBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentTransactionBinding.inflate(inflater, container, false);
+        binding = FragmentHistoryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         /*
@@ -36,4 +33,5 @@ public class TransactionFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 }

@@ -1,4 +1,4 @@
-package com.example.icar.ui.home;
+package com.example.icar.home_ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
