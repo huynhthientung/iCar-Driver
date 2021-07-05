@@ -21,7 +21,7 @@
         tools:src="@drawable/xe" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView_booking"
+        android:id="@+id/cardView_add_place"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -42,38 +42,11 @@
             android:layout_height="60dp"
             android:gravity="center"
             android:textSize="25sp"
-            android:text="@string/car_booking"
+            android:text="@string/add_place"
             android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView_service_searching"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        app:cardBackgroundColor="#78C0F3"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView_booking">
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:text="@string/service_searching"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-
-    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_license"
@@ -89,7 +62,7 @@
         app:cardElevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView_service_searching">
+        app:layout_constraintTop_toBottomOf="@+id/cardView_add_place">
 
         <TextView
             android:id="@+id/textView4"

@@ -156,6 +156,7 @@
                 android:onClick="OpenSignupPage"
                 android:padding="15dp"
                 android:text="@string/sign_up"
+                android:visibility="gone"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -164,9 +165,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"
-                android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="127dp"
+                android:layout_marginRight="127dp"
                 android:onClick="OpenForgotPasswordPage"
                 android:padding="15dp"
                 android:text="@string/forgot_password"

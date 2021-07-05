@@ -22,8 +22,8 @@ public class Utils {
 
     private static Utils instance;
     private static Driver driver;
-    private static ArrayList<Service> serviceArrayList = null;
-    private static ArrayList<ExtraService> extraServiceArrayList = null;
+//    private static ArrayList<Service> serviceArrayList = null;
+//    private static ArrayList<ExtraService> extraServiceArrayList = null;
 //    private static ArrayList<Car> carArrayList;
     private final FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private final FirebaseUser mUser = mAuth.getCurrentUser();
@@ -33,14 +33,14 @@ public class Utils {
     private static String driverName = "";
 
     private Utils() {
-        if (null == serviceArrayList) {
-            serviceArrayList = new ArrayList<>();
-            initServiceArrayList();
-        }
-        if (null == extraServiceArrayList) {
-            extraServiceArrayList = new ArrayList<>();
-            initExtraServiceArrayList();
-        }
+//        if (null == serviceArrayList) {
+//            serviceArrayList = new ArrayList<>();
+//            initServiceArrayList();
+//        }
+//        if (null == extraServiceArrayList) {
+//            extraServiceArrayList = new ArrayList<>();
+//            initExtraServiceArrayList();
+//        }
         if (null == uid) {
             uid = mUser.getUid();
         }
@@ -67,75 +67,75 @@ public class Utils {
         });
     }
 
-    private void initExtraServiceArrayList() {
-        root.child("ExtraServices").addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
-                ExtraService extraService = snapshot.getValue(ExtraService.class);
-                extraServiceArrayList.add(extraService);
-            }
+//    private void initExtraServiceArrayList() {
+//        root.child("ExtraServices").addChildEventListener(new ChildEventListener() {
+//            @Override
+//            public void onChildAdded(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
+//                ExtraService extraService = snapshot.getValue(ExtraService.class);
+//                extraServiceArrayList.add(extraService);
+//            }
+//
+//            @Override
+//            public void onChildChanged(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
+//
+//            }
+//
+//            @Override
+//            public void onChildRemoved(@NonNull @NotNull DataSnapshot snapshot) {
+//
+//            }
+//
+//            @Override
+//            public void onChildMoved(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+//
+//            }
+//        });
+//    }
 
-            @Override
-            public void onChildChanged(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull @NotNull DataSnapshot snapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
-
-            }
-        });
-    }
-
-    private void initServiceArrayList() {
-        root.child("Services").addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
-                Service service = snapshot.getValue(Service.class);
-                serviceArrayList.add(service);
-            }
-
-            @Override
-            public void onChildChanged(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull @NotNull DataSnapshot snapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
-
-            }
-        });
-    }
+//    private void initServiceArrayList() {
+//        root.child("Services").addChildEventListener(new ChildEventListener() {
+//            @Override
+//            public void onChildAdded(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
+//                Service service = snapshot.getValue(Service.class);
+//                serviceArrayList.add(service);
+//            }
+//
+//            @Override
+//            public void onChildChanged(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
+//
+//            }
+//
+//            @Override
+//            public void onChildRemoved(@NonNull @NotNull DataSnapshot snapshot) {
+//
+//            }
+//
+//            @Override
+//            public void onChildMoved(@NonNull @NotNull DataSnapshot snapshot, @Nullable @org.jetbrains.annotations.Nullable String previousChildName) {
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+//
+//            }
+//        });
+//    }
 
 
 
-    public ArrayList<Service> getServiceArrayList() {
-        return serviceArrayList;
-    }
-
-    public ArrayList<ExtraService> getExtraServiceArrayList() {
-        return extraServiceArrayList;
-    }
+//    public ArrayList<Service> getServiceArrayList() {
+//        return serviceArrayList;
+//    }
+//
+//    public ArrayList<ExtraService> getExtraServiceArrayList() {
+//        return extraServiceArrayList;
+//    }
 
     public String getUid() {
         return uid;

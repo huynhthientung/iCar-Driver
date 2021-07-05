@@ -25,6 +25,7 @@
     <string name="title_Booking">Đặt xe</string>
     <string name="title_ForgetPassword">Quên mật khẩu</string>
     <string name="title_UpdateProfile">Cập nhật thông tin cá nhân</string>
+    <string name="title_AddPlace">Thêm chi tiết lộ trình</string>
 
     <string name="car_booking">Tiến hành đặt xe</string>
     <string name="car_searching">Tra cứu xe</string>
@@ -83,8 +84,7 @@
     <string name="total">Tổng cộng</string>
     <string name="cancel">Hủy</string>
     <string name="confirm">Xác nhận</string>
-
-
+    <string name="add_place">Thêm lộ trình đơn hàng </string>
 
 
     <string-array name="options_service_array">

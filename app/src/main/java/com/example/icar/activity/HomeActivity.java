@@ -70,7 +70,7 @@ public class HomeActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_profile, R.id.nav_history, R.id.nav_transaction)
+                R.id.nav_home, R.id.nav_profile)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home);
@@ -87,14 +87,6 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 Toast.makeText(HomeActivity.this, "Share", Toast.LENGTH_SHORT).show();
-                //TODO: handle later
-                return false;
-            }
-        });
-        navigationView.getMenu().findItem(R.id.nav_send).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                Toast.makeText(HomeActivity.this, "Send", Toast.LENGTH_SHORT).show();
                 //TODO: handle later
                 return false;
             }

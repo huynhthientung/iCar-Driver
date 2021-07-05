@@ -6,24 +6,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.icar.activity.AboutUsActivity;
-import com.example.icar.activity.BookingActivity;
+import com.example.icar.activity.AddPlaceActivity;
 import com.example.icar.activity.LicenseActivity;
 import com.example.icar.R;
-import com.example.icar.activity.ServiceActivity;
 import com.example.icar.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     private ImageView imageView;
-    private CardView cardView_booking, cardView_service, cardView_license, cardView_about;
+    private CardView cardView_addPlace, cardView_license, cardView_about;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -35,22 +33,14 @@ public class HomeFragment extends Fragment {
 
         // init controls
         cardView_about = binding.cardViewAboutUs;
-        cardView_booking = binding.cardViewBooking;
+        cardView_addPlace = binding.cardViewAddPlace;
         cardView_license = binding.cardViewLicense;
-        cardView_service = binding.cardViewServiceSearching;
-        
+
         // handle events
         cardView_about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 about_onClick();
-            }
-        });
-
-        cardView_service.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                service_onClick();
             }
         });
 
@@ -61,28 +51,23 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        cardView_booking.setOnClickListener(new View.OnClickListener() {
+        cardView_addPlace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                carBooking_onClick();
+                addPlace_onClick();
             }
         });
         return root;
     }
 
-    private void carBooking_onClick() {
+    private void addPlace_onClick() {
 //        Toast.makeText(getContext(), "Car Booking", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(getContext(), BookingActivity.class));
+        startActivity(new Intent(getContext(), AddPlaceActivity.class));
     }
 
     private void license_onClick() {
 //        Toast.makeText(getContext(), "License", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(getContext(), LicenseActivity.class));
-    }
-
-    private void service_onClick() {
-//        Toast.makeText(getContext(), "Service", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(getContext(), ServiceActivity.class));
     }
 
     private void about_onClick() {

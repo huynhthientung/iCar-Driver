@@ -15,15 +15,5 @@
         android:name="com.example.icar.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/nav_transaction"
-        android:name="com.example.icar.ui.transaction.TransactionFragment"
-        android:label="@string/menu_transaction"
-        tools:layout="@layout/fragment_transaction" />
-    <fragment
-        android:id="@+id/nav_history"
-        android:name="com.example.icar.ui.history.HistoryFragment"
-        android:label="@string/menu_history"
-        tools:layout="@layout/fragment_history" />
 
 </navigation>
