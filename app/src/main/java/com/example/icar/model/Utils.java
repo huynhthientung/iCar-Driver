@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class Utils {
 
     private static Utils instance;
-    private static Customer customer;
+    private static Driver driver;
     private static ArrayList<Service> serviceArrayList = null;
     private static ArrayList<ExtraService> extraServiceArrayList = null;
 //    private static ArrayList<Car> carArrayList;
@@ -47,17 +47,17 @@ public class Utils {
         if (null == photoUrl) {
             photoUrl = mUser.getPhotoUrl();
         }
-        if (null == customer) {
-            initCustomer();
+        if (null == driver) {
+            initDriver();
         }
         //TODO: carArrayList
     }
 
-    private void initCustomer() {
-        root.child("Customers").child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
+    private void initDriver() {
+        root.child("Drivers").child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                customer = snapshot.getValue(Customer.class);
+                driver = snapshot.getValue(Driver.class);
             }
 
             @Override
@@ -145,8 +145,8 @@ public class Utils {
         return photoUrl;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public Driver getDriver() {
+        return driver;
     }
 
     public String getDriverName(String uid) {

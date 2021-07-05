@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     progressBar.setVisibility(View.GONE);
-                    Toast.makeText(MainActivity.this, "Successfully sign-in", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Đăng nhập thành công ", Toast.LENGTH_SHORT).show();
                     // TODO: move on to dashboard
                     startActivity(new Intent(MainActivity.this, HomeActivity.class));
                     finish();
@@ -228,7 +228,7 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
             return;
         } else {
-            Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Nhấn lần nữa để thoát ", Toast.LENGTH_SHORT).show();
         }
         backPressed = System.currentTimeMillis();
     }

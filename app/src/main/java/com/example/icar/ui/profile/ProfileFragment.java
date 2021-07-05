@@ -16,9 +16,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.icar.R;
 import com.example.icar.model.Customer;
 import com.example.icar.activity.UpdateProfileActivity;
 import com.example.icar.databinding.FragmentProfileBinding;
+import com.example.icar.model.Driver;
 import com.example.icar.model.Utils;
 import com.google.firebase.FirebaseApp;
 
@@ -32,12 +34,13 @@ public class ProfileFragment extends Fragment {
         FirebaseApp.initializeApp(getContext());
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        final ImageView igmAvatar;
+        final ImageView igmAvatar, imgStatus;
         final TextView txtName, txtEmail, txtPhone, txtAddress, txtBirthday, txtGender;
         final Button btnEdit;
         final ProgressBar progressBar;
 
         igmAvatar = binding.imageViewAvatarProfileFragment;
+        imgStatus = binding.imageViewDriverStatus;
         txtName = binding.textViewNameProFrm;
         txtEmail = binding.textViewEmailProFrm;
         txtPhone = binding.textViewPhoneProFrm;
@@ -49,15 +52,20 @@ public class ProfileFragment extends Fragment {
 
         progressBar.setVisibility(View.VISIBLE);
         String uid = Utils.getInstance().getUid();
-        Customer customer = Utils.getInstance().getCustomer(); // Select * from Customers where UID = KEY
-        name = customer.full_name;
+        Driver driver = Utils.getInstance().getDriver(); // Select * from Drivers where UID = KEY
+        name = driver.full_name;
         try {
-            txtName.setText(txtName.getText().toString() + customer.full_name);
-            txtEmail.setText(txtEmail.getText().toString() + customer.email);
-            txtPhone.setText(txtPhone.getText().toString() + customer.phone);
-            txtAddress.setText(txtAddress.getText().toString() + customer.address);
-            txtBirthday.setText(txtBirthday.getText().toString() + customer.birthday);
-            txtGender.setText(txtGender.getText().toString() + (customer.gender ? "Nam" : "Nu"));
+            txtName.setText(txtName.getText().toString() + driver.full_name);
+            txtEmail.setText(txtEmail.getText().toString() + driver.email);
+            txtPhone.setText(txtPhone.getText().toString() + driver.phone);
+            txtAddress.setText(txtAddress.getText().toString() + driver.address);
+            txtBirthday.setText(txtBirthday.getText().toString() + driver.birthday);
+            txtGender.setText(txtGender.getText().toString() + (driver.gender ? "Nam" : "Nữ"));
+            if (!driver.TrangThai) {
+                imgStatus.setImageResource(R.drawable.greendot);
+            } else {
+                imgStatus.setImageResource(R.drawable.reddot);
+            }
             Glide.with(getContext()).asBitmap().load(Utils.getInstance().getPhotoUrl()).into(igmAvatar);
         } catch (Exception e) {
             Log.d("AAA", e.getMessage());

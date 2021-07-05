@@ -10,6 +10,17 @@ public class Driver {
     public boolean gender;
     public boolean TrangThai;
 
+    public Driver(String uid, String full_name, String email, String phone, String address, String birthday, boolean gender) {
+        this.uid = uid;
+        this.full_name = full_name;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.TrangThai = false;
+    }
+
     public Driver() {
     }
 }
