@@ -100,33 +100,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
-//                switch (item.getItemId()) {
-//                    case R.id.nav_share:
-//                        Toast.makeText(HomeActivity.this, "Share", Toast.LENGTH_SHORT).show();
-//                        //TODO: handle later
-//                        break;
-//                    case R.id.nav_send:
-//                        //TODO: handle later
-//                        Toast.makeText(HomeActivity.this, "Send", Toast.LENGTH_SHORT).show();
-//                        break;
-//                    case R.id.nav_logout:
-//                        mAuth.signOut();
-//                        startActivity(new Intent(HomeActivity.this, MainActivity.class));
-//                        finish();
-//                        break;
-//                    default:
-//                        break;
-//                }
-//                // This is for maintaining the behavior of the Navigation view
-////                NavigationUI.onNavDestinationSelected(item, navController);
-//                //This is for closing the drawer after acting on it
-//                drawer.closeDrawer(GravityCompat.START);
-//                return true;
-//            }
-//        });
     }
 
     private void sendFeedback() {

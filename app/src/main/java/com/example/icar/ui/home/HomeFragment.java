@@ -15,6 +15,7 @@ import com.example.icar.activity.AboutUsActivity;
 import com.example.icar.activity.AddPlaceActivity;
 import com.example.icar.activity.LicenseActivity;
 import com.example.icar.R;
+import com.example.icar.activity.SelectBillActivity;
 import com.example.icar.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -62,7 +63,7 @@ public class HomeFragment extends Fragment {
 
     private void addPlace_onClick() {
 //        Toast.makeText(getContext(), "Car Booking", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(getContext(), AddPlaceActivity.class));
+        startActivity(new Intent(getContext(), SelectBillActivity.class));
     }
 
     private void license_onClick() {

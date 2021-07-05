@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ICar">
         <activity
+            android:name=".activity.SelectBillActivity"
+            android:label="@string/title_SelectBill"
+            android:theme="@style/Theme.ICarActionBar" />
+        <activity
             android:name=".activity.AddPlaceActivity"
             android:label="@string/title_AddPlace"
             android:theme="@style/Theme.ICarActionBar" />
